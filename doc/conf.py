@@ -42,6 +42,7 @@ html_static_path = ['_static']
 html_logo =  os.path.join(serverDir, 'static/image/RotorHazard Logo.svg')
 
 html_theme_options = {
+    'nav_title': 'RotorHazard',
     'color_primary': 'orange',
 
     'repo_url': 'https://github.com/RotorHazard/RotorHazard',
