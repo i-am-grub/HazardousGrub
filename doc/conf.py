@@ -22,6 +22,10 @@ author = 'RotorHazard Development Team'
 release = server.RELEASE_VERSION
 version = release.split("-")[0]
 
+rst_prolog = f"""
+.. |project_release| replace:: {release}
+"""
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
@@ -38,6 +42,7 @@ html_static_path = ['_static']
 html_logo =  os.path.join(serverDir, 'static/image/RotorHazard Logo.svg')
 
 html_theme_options = {
+    'nav_title': 'RotorHazard',
     'color_primary': 'orange',
 
     'repo_url': 'https://github.com/RotorHazard/RotorHazard',
