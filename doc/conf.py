@@ -42,7 +42,6 @@ html_static_path = ['_static']
 html_logo =  os.path.join(serverDir, 'static/image/RotorHazard Logo.svg')
 
 html_theme_options = {
-    'nav_title': 'RotorHazard',
     'color_primary': 'orange',
 
     'repo_url': 'https://github.com/RotorHazard/RotorHazard',
@@ -52,3 +51,13 @@ html_theme_options = {
     'globaltoc_depth': 2,
     'globaltoc_collapse': True,
 }
+
+html_sidebars = {
+    "**": ["logo-text.html", "globaltoc.html", "searchbox.html"]
+}
+
+extensions = ['sphinx_material',
+              'sphinx.ext.autosectionlabel',
+              'sphinx_substitution_extensions',
+              'sphinx_copybutton'
+              ]
