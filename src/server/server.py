@@ -40,7 +40,8 @@ import RHUtils  # need to import this early to get RH_GPIO initialized before ge
 from RHUtils import catchLogExceptionsWrapper
 
 import gevent.monkey
-gevent.monkey.patch_all()
+if __name__ == '__main__':
+    gevent.monkey.patch_all()
 
 import io
 import os
@@ -59,14 +60,17 @@ DB_FILE_NAME = 'database.db'
 DB_BKP_DIR_NAME = 'db_bkp'
 _DB_URI = 'sqlite:///' + os.path.join(BASEDIR, DB_FILE_NAME)
 
-APP = Flask(__name__, static_url_path='/static')
-APP.app_context().push()
+if __name__ == '__main__':
+    APP = Flask(__name__, static_url_path='/static')
+    APP.app_context().push()
 
 import FlaskAppObj
-FlaskAppObj.set_flask_app(APP)
+if __name__ == '__main__':
+    FlaskAppObj.set_flask_app(APP)
 
 import Database
-Database.initialize(_DB_URI)
+if __name__ == '__main__':
+    Database.initialize(_DB_URI)
 
 import socket
 import random
@@ -75,7 +79,8 @@ import json
 
 import Config
 
-RHUtils.checkPythonVersion(MIN_PYTHON_MAJOR_VERSION, MIN_PYTHON_MINOR_VERSION)
+if __name__ == '__main__':
+    RHUtils.checkPythonVersion(MIN_PYTHON_MAJOR_VERSION, MIN_PYTHON_MINOR_VERSION)
 
 import Results
 import Language
