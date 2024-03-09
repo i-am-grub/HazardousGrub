@@ -3,6 +3,17 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import os
+import sys
+
+topdir = os.path.split(os.path.split(__file__)[0])[0]
+serverDir = os.path.join(topdir, 'src/server')
+utilDir =os.path.join(serverDir, 'util')
+interfaceDir = os.path.join(topdir, 'src/interface')
+sys.path.insert(0, serverDir)
+sys.path.insert(0, utilDir)
+sys.path.insert(0, interfaceDir)
+
 import server
 
 project = 'RotorHazard'
