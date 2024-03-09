@@ -176,8 +176,8 @@ if __name__ == '__main__' and len(sys.argv) > 1:
 
 
 
-    # start SocketIO service
-    SOCKET_IO = SocketIO(APP, async_mode='gevent', cors_allowed_origins=Config.GENERAL['CORS_ALLOWED_HOSTS'], max_http_buffer_size=5e7)
+# start SocketIO service
+SOCKET_IO = SocketIO(APP, async_mode='gevent', cors_allowed_origins=Config.GENERAL['CORS_ALLOWED_HOSTS'], max_http_buffer_size=5e7)
 
 if __name__ == "__main__":
 
