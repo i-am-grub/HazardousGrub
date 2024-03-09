@@ -15,6 +15,7 @@ import server
 project = 'RotorHazard'
 copyright = '2024, Michael Niggel and other contributors'
 author = 'RotorHazard Development Team'
+version = '1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
