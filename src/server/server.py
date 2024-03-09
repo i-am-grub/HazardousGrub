@@ -174,10 +174,12 @@ if __name__ == '__main__' and len(sys.argv) > 1:
             print("Unrecognized command-line argument(s): {0}".format(sys.argv[1:]))
             sys.exit(1)
 
-if __name__ == "__main__":
+
 
     # start SocketIO service
     SOCKET_IO = SocketIO(APP, async_mode='gevent', cors_allowed_origins=Config.GENERAL['CORS_ALLOWED_HOSTS'], max_http_buffer_size=5e7)
+
+if __name__ == "__main__":
 
     # this is the moment where we can forward log-messages to the frontend, and
     # thus set up logging for good.
