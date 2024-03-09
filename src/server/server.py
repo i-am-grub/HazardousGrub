@@ -40,8 +40,7 @@ import RHUtils  # need to import this early to get RH_GPIO initialized before ge
 from RHUtils import catchLogExceptionsWrapper
 
 import gevent.monkey
-if __name__ == '__main__':
-    gevent.monkey.patch_all()
+gevent.monkey.patch_all()
 
 import io
 import os
