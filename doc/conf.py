@@ -35,7 +35,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'sphinx_material'
 html_static_path = ['_static']
-html_logo =  'static/image/RotorHazard Logo.svg'
+html_logo =  os.path.join(serverDir, 'static/image/RotorHazard Logo.svg')
 
 html_theme_options = {
     'color_primary': 'orange',
