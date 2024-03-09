@@ -10,7 +10,7 @@ from RHUI import UIField, UIFieldType
 from eventmanager import Evt
 
 from FlaskAppObj import APP
-APP.app_context().push()
+#APP.app_context().push()
 
 class RHAPI():
     def __init__(self, race_context):
