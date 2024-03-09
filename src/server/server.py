@@ -174,35 +174,37 @@ if __name__ == '__main__' and len(sys.argv) > 1:
             print("Unrecognized command-line argument(s): {0}".format(sys.argv[1:]))
             sys.exit(1)
 
-# start SocketIO service
-SOCKET_IO = SocketIO(APP, async_mode='gevent', cors_allowed_origins=Config.GENERAL['CORS_ALLOWED_HOSTS'], max_http_buffer_size=5e7)
+if __name__ == "__main__":
 
-# this is the moment where we can forward log-messages to the frontend, and
-# thus set up logging for good.
-Current_log_path_name = log.later_stage_setup(Config.LOGGING, SOCKET_IO)
+    # start SocketIO service
+    SOCKET_IO = SocketIO(APP, async_mode='gevent', cors_allowed_origins=Config.GENERAL['CORS_ALLOWED_HOSTS'], max_http_buffer_size=5e7)
 
-RaceContext.sensors = Sensors()
-RaceContext.cluster = None
-Use_imdtabler_jar_flag = False  # set True if IMDTabler.jar is available
-server_ipaddress_str = None
-ShutdownButtonInputHandler = None
-Server_secondary_mode = None
+    # this is the moment where we can forward log-messages to the frontend, and
+    # thus set up logging for good.
+    Current_log_path_name = log.later_stage_setup(Config.LOGGING, SOCKET_IO)
 
-RaceContext.rhdata = RHData.RHData(Events, RaceContext, SERVER_API, DB_FILE_NAME, DB_BKP_DIR_NAME) # Primary race data storage
+    RaceContext.sensors = Sensors()
+    RaceContext.cluster = None
+    Use_imdtabler_jar_flag = False  # set True if IMDTabler.jar is available
+    server_ipaddress_str = None
+    ShutdownButtonInputHandler = None
+    Server_secondary_mode = None
 
-RaceContext.pagecache = PageCache.PageCache(RaceContext, Events) # For storing page cache
+    RaceContext.rhdata = RHData.RHData(Events, RaceContext, SERVER_API, DB_FILE_NAME, DB_BKP_DIR_NAME) # Primary race data storage
 
-RaceContext.language = Language.Language(RaceContext.rhdata) # initialize language
-__ = RaceContext.language.__ # Shortcut to translation function
-Database.__ = __ # Pass language to Database module
+    RaceContext.pagecache = PageCache.PageCache(RaceContext, Events) # For storing page cache
 
-RaceContext.race = RHRace.RHRace(RaceContext) # Current race variables
+    RaceContext.language = Language.Language(RaceContext.rhdata) # initialize language
+    __ = RaceContext.language.__ # Shortcut to translation function
+    Database.__ = __ # Pass language to Database module
 
-RaceContext.rhui = RHUI.RHUI(APP, SOCKET_IO, RaceContext, Events) # User Interface Manager
-RaceContext.rhui.__ = RaceContext.language.__ # Pass translation shortcut
+    RaceContext.race = RHRace.RHRace(RaceContext) # Current race variables
 
-RaceContext.calibration = calibration.Calibration(RaceContext)
-RaceContext.heatautomator = heat_automation.HeatAutomator(RaceContext)
+    RaceContext.rhui = RHUI.RHUI(APP, SOCKET_IO, RaceContext, Events) # User Interface Manager
+    RaceContext.rhui.__ = RaceContext.language.__ # Pass translation shortcut
+
+    RaceContext.calibration = calibration.Calibration(RaceContext)
+    RaceContext.heatautomator = heat_automation.HeatAutomator(RaceContext)
 
 ui_server_messages = {}
 def set_ui_message(mainclass, message, header=None, subclass=None):
@@ -2369,10 +2371,11 @@ def heartbeat_thread_function():
             logger.exception('Exception in Heartbeat thread loop')
             gevent.sleep(0.500)
 
-# declare/initialize variables for heartbeat functions
-heartbeat_thread_function.iter_tracker = 0
-heartbeat_thread_function.imdtabler_flag = False
-heartbeat_thread_function.last_error_rep_time = monotonic()
+if __name__ == "__main__":
+    # declare/initialize variables for heartbeat functions
+    heartbeat_thread_function.iter_tracker = 0
+    heartbeat_thread_function.imdtabler_flag = False
+    heartbeat_thread_function.last_error_rep_time = monotonic()
 
 @catchLogExceptionsWrapper
 def clock_check_thread_function():
