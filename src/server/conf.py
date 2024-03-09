@@ -25,7 +25,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_material'
-html_static_path = [os.path.join(docs_dir, '_static')]
+html_static_path = ['_static']
 html_logo =  'static/image/RotorHazard Logo.svg'
 
 html_theme_options = {
