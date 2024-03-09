@@ -110,10 +110,6 @@ from data_import import DataImportManager
 from VRxControl import VRxControlManager
 from HeatGenerator import HeatGeneratorManager
 
-
-if __name__ != '__main__':
-    exit()
-
 # Create shared context
 RaceContext = RaceContext.RaceContext()
 RHAPI = RHAPI.RHAPI(RaceContext)
