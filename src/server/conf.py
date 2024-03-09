@@ -2,18 +2,7 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-
 import os
-import sys
-
-topdir = os.path.split(os.path.split(__file__)[0])[0]
-serverdir = os.path.join(topdir, "src/server")
-serverUtildir = os.path.join(serverdir, "util")
-interfacedir = os.path.join(topdir, "src/interface")
-sys.path.insert(0, serverdir)
-sys.path.insert(0, serverUtildir)
-sys.path.insert(0, interfacedir)
-
 import server
 
 project = 'RotorHazard'
@@ -25,19 +14,19 @@ version = release.split("-")[0]
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+docs_dir = "../../doc/"
+
 extensions = []
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_material'
-html_static_path = ['_static']
-html_logo =  '../main/src/server/static/image/RotorHazard Logo.svg'
+html_static_path = [os.path.join(docs_dir, '_static')]
+html_logo =  'static/image/RotorHazard Logo.svg'
 
 html_theme_options = {
     'color_primary': 'orange',
