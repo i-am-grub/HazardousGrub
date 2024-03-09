@@ -2,7 +2,7 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-import os
+
 import server
 
 project = 'RotorHazard'
@@ -13,8 +13,6 @@ version = release.split("-")[0]
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
-docs_dir = "../../doc/"
 
 extensions = []
 
