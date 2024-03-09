@@ -22,4 +22,4 @@ formats:
 
 python:
   install:
-    - requirements: docs/docReqs.txt
+    - requirements: doc/docReqs.txt
