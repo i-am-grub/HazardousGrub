@@ -8,7 +8,9 @@ import sys
 
 topdir = os.path.split(os.path.split(__file__)[0])[0]
 serverdir = os.path.join(topdir, "src/server")
+#serverUtildir = os.path.join(serverdir, "util")
 sys.path.insert(0, serverdir)
+#sys.path.insert(0, serverUtildir)
 
 import server
 
@@ -16,6 +18,7 @@ project = 'RotorHazard'
 copyright = '2024, Michael Niggel and other contributors'
 author = 'RotorHazard Development Team'
 version = '1'
+release = server.RELEASE_VERSION
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
