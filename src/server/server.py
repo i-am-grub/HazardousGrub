@@ -174,35 +174,35 @@ if __name__ == '__main__' and len(sys.argv) > 1:
             print("Unrecognized command-line argument(s): {0}".format(sys.argv[1:]))
             sys.exit(1)
 
-# start SocketIO service
-SOCKET_IO = SocketIO(APP, async_mode='gevent', cors_allowed_origins=Config.GENERAL['CORS_ALLOWED_HOSTS'], max_http_buffer_size=5e7)
+    # start SocketIO service
+    SOCKET_IO = SocketIO(APP, async_mode='gevent', cors_allowed_origins=Config.GENERAL['CORS_ALLOWED_HOSTS'], max_http_buffer_size=5e7)
 
-# this is the moment where we can forward log-messages to the frontend, and
-# thus set up logging for good.
-Current_log_path_name = log.later_stage_setup(Config.LOGGING, SOCKET_IO)
+    # this is the moment where we can forward log-messages to the frontend, and
+    # thus set up logging for good.
+    Current_log_path_name = log.later_stage_setup(Config.LOGGING, SOCKET_IO)
 
-RaceContext.sensors = Sensors()
-RaceContext.cluster = None
-Use_imdtabler_jar_flag = False  # set True if IMDTabler.jar is available
-server_ipaddress_str = None
-ShutdownButtonInputHandler = None
-Server_secondary_mode = None
+    RaceContext.sensors = Sensors()
+    RaceContext.cluster = None
+    Use_imdtabler_jar_flag = False  # set True if IMDTabler.jar is available
+    server_ipaddress_str = None
+    ShutdownButtonInputHandler = None
+    Server_secondary_mode = None
 
-RaceContext.rhdata = RHData.RHData(Events, RaceContext, SERVER_API, DB_FILE_NAME, DB_BKP_DIR_NAME) # Primary race data storage
+    RaceContext.rhdata = RHData.RHData(Events, RaceContext, SERVER_API, DB_FILE_NAME, DB_BKP_DIR_NAME) # Primary race data storage
 
-RaceContext.pagecache = PageCache.PageCache(RaceContext, Events) # For storing page cache
+    RaceContext.pagecache = PageCache.PageCache(RaceContext, Events) # For storing page cache
 
-RaceContext.language = Language.Language(RaceContext.rhdata) # initialize language
-__ = RaceContext.language.__ # Shortcut to translation function
-Database.__ = __ # Pass language to Database module
+    RaceContext.language = Language.Language(RaceContext.rhdata) # initialize language
+    __ = RaceContext.language.__ # Shortcut to translation function
+    Database.__ = __ # Pass language to Database module
 
-RaceContext.race = RHRace.RHRace(RaceContext) # Current race variables
+    RaceContext.race = RHRace.RHRace(RaceContext) # Current race variables
 
-RaceContext.rhui = RHUI.RHUI(APP, SOCKET_IO, RaceContext, Events) # User Interface Manager
-RaceContext.rhui.__ = RaceContext.language.__ # Pass translation shortcut
+    RaceContext.rhui = RHUI.RHUI(APP, SOCKET_IO, RaceContext, Events) # User Interface Manager
+    RaceContext.rhui.__ = RaceContext.language.__ # Pass translation shortcut
 
-RaceContext.calibration = calibration.Calibration(RaceContext)
-RaceContext.heatautomator = heat_automation.HeatAutomator(RaceContext)
+    RaceContext.calibration = calibration.Calibration(RaceContext)
+    RaceContext.heatautomator = heat_automation.HeatAutomator(RaceContext)
 
 ui_server_messages = {}
 def set_ui_message(mainclass, message, header=None, subclass=None):
