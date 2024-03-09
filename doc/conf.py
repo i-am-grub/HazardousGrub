@@ -9,8 +9,10 @@ import sys
 topdir = os.path.split(os.path.split(__file__)[0])[0]
 serverdir = os.path.join(topdir, "src/server")
 serverUtildir = os.path.join(serverdir, "util")
+interfacedir = os.path.join(topdir, "src/interface")
 sys.path.insert(0, serverdir)
 sys.path.insert(0, serverUtildir)
+sys.path.insert(0, interfacedir)
 
 import server
 
