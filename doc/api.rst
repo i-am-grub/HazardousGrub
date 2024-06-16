@@ -9,10 +9,16 @@ RotorHazard makes use of externally loaded plugins to extend its functionality a
 
 .. autosummary::
     :toctree: _autosummary
-    :template: custom-mod-template.rst
+    :template: full-mod-template.rst
     :recursive:
 
     rhapi
+
+.. autosummary::
+    :toctree: _autosummary
+    :template: partial-mod-template.rst
+    :recursive:
+
     Database
     data_export
     data_import

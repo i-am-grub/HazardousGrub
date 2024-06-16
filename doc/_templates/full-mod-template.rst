@@ -32,7 +32,7 @@
 
    .. autosummary::
       :toctree:
-      :template: custom-cls-template.rst
+      :template: full-cls-template.rst
    {% for item in classes %}
       {{ item }}
    {%- endfor %}
@@ -51,16 +51,16 @@
    {% endif %}
    {% endblock %}
 
-{% block modules %}
-{% if modules %}
-.. rubric:: Modules
+   {% block modules %}
+   {% if modules %}
+   .. rubric:: Modules
 
-.. autosummary::
-   :toctree:
-   :template: custom-mod-template.rst
-   :recursive:
-{% for item in modules %}
-   {{ item }}
-{%- endfor %}
-{% endif %}
-{% endblock %}
+   .. autosummary::
+      :toctree:
+      :template: full-mod-template.rst
+      :recursive:
+   {% for item in modules %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
