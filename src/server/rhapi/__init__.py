@@ -49,39 +49,39 @@ class _RHAPI():
 
     server_info = None
     ui = rhapi.ui
-    """A handle for an instance of :module:`rhapi.ui`"""
+    """A handle for an instance of :module:`ui`"""
     fields = rhapi.fields
-    """A handle for an instance of :module:`rhapi.fields`"""
+    """A handle for an instance of :module:`fields`"""
     db = rhapi.db
-    """A handle for an instance of :module:`rhapi.db`"""
+    """A handle for an instance of :module:`db`"""
     io = rhapi.io
-    """A handle for an instance of :module:`rhapi.io`"""
+    """A handle for an instance of :module:`io`"""
     heatgen = rhapi.heatgen
-    """A handle for an instance of :module:`rhapi.heatgen`"""
+    """A handle for an instance of :module:`heatgen`"""
     classrank = rhapi.classrank
-    """A handle for an instance of :module:`rhapi.classrank`"""
+    """A handle for an instance of :module:`classrank`"""
     points = rhapi.points
-    """A handle for an instance of :module:`rhapi.points`"""
+    """A handle for an instance of :module:`points`"""
     led = rhapi.led
-    """A handle for an instance of :module:`rhapi.led`"""
+    """A handle for an instance of :module:`led`"""
     vrxcontrol = rhapi.vrxcontrol
-    """A handle for an instance of :module:`rhapi.vrxcontrol`"""
+    """A handle for an instance of :module:`vrxcontrol`"""
     race = rhapi.race
-    """A handle for an instance of :module:`rhapi.race`"""
+    """A handle for an instance of :module:`race`"""
     language = rhapi.language
-    """A handle for an instance of :module:`rhapi.language`"""
+    """A handle for an instance of :module:`language`"""
     interface = rhapi.interface
-    """A handle for an instance of :module:`rhapi.interface`"""
+    """A handle for an instance of :module:`interface`"""
     config = rhapi.config
-    """A handle for an instance of :module:`rhapi.config`"""
+    """A handle for an instance of :module:`config`"""
     sensors = rhapi.sensors
-    """A handle for an instance of :module:`rhapi.sensors`"""
+    """A handle for an instance of :module:`sensors`"""
     eventresults = rhapi.eventresults
-    """A handle for an instance of :module:`rhapi.eventresults`"""
+    """A handle for an instance of :module:`eventresults`"""
     events = rhapi.events
-    """A handle for an instance of :module:`rhapi.events`"""
+    """A handle for an instance of :module:`events`"""
     __ = rhapi.language.__ # shortcut access
-    """A shortcut handle for :meth:`rhapi.language.__`"""
+    """A shortcut handle for :meth:`language.__`"""
 
     def __init__(self):
         """Constructor method"""
