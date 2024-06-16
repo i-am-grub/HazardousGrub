@@ -35,7 +35,7 @@
 
 .. autosummary::
    :toctree:
-   :template: full-mod-template.rst
+   :template: partial-mod-template.rst
    :recursive:
 {% for item in modules %}
    {{ item }}
