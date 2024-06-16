@@ -13,23 +13,6 @@ RotorHazard makes use of externally loaded plugins to extend its functionality a
     :recursive:
 
     rhapi
-    rhapi.classrank
-    rhapi.config
-    rhapi.db
-    rhapi.eventresults
-    rhapi.events
-    rhapi.fields
-    rhapi.heatgen
-    rhapi.interface
-    rhapi.io
-    rhapi.language
-    rhapi.led
-    rhapi.points
-    rhapi.race
-    rhapi.sensors
-    rhapi.ui
-    rhapi.vrxcontrol
-
     Database
     data_export
     data_import
