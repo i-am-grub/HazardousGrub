@@ -51,16 +51,16 @@
    {% endif %}
    {% endblock %}
 
-{% block modules %}
-{% if modules %}
-.. rubric:: Modules
+   {% block modules %}
+   {% if modules %}
+   .. rubric:: Modules
 
-.. autosummary::
-   :toctree:
-   :template: full-mod-template.rst
-   :recursive:
-{% for item in modules %}
-   {{ item }}
-{%- endfor %}
-{% endif %}
-{% endblock %}
+   .. autosummary::
+      :toctree:
+      :template: full-mod-template.rst
+      :recursive:
+   {% for item in modules %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
