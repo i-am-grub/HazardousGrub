@@ -41,6 +41,8 @@ extensions = [
     'sphinx_copybutton',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.coverage'
 ]
 
 # -- Options for HTML output -------------------------------------------------
