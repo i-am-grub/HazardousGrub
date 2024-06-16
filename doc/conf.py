@@ -67,6 +67,3 @@ autodoc_typehints = "description"
 autodoc_typehints_description_target = "documented"
 autodoc_typehints_format = "short"
 autosummary_generate = True
-autodoc_default_options = {
-    'members': True,
-}
