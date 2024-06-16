@@ -8,8 +8,6 @@
    :inherited-members:
 
    {% block methods %}
-   .. automethod:: __init__
-
    {% if attributes %}
    .. rubric:: {{ _('Attributes') }}
 

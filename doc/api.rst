@@ -7,7 +7,7 @@ RotorHazard makes use of externally loaded plugins to extend its functionality a
 
     The following determines what modules from this repo will be documented
 
-.. autosummary::
+.. automodule::
     :toctree: _autosummary
     :template: full-mod-template.rst
     :recursive:
