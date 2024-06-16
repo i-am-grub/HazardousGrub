@@ -1,7 +1,7 @@
 Welcome to RotorHazard's documentation!
 =======================================
 
-../../README.md
+../README.md
 
 .. toctree::
    :maxdepth: 1
