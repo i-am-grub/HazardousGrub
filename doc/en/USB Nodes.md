@@ -2,9 +2,9 @@
 
 Hardware nodes may be connected into the system via USB.  A node can be created with an Arduino, an RX5808 module, and six wires; with the connections shown below.
 
-![USB node wiring](img/USB_node_wiring.jpg)
-![USB node built1](img/USB_node_built1.jpg)
-![USB node built2](img/USB_node_built2.jpg)
+![USB node wiring](../img/USB_node_wiring.jpg)
+![USB node built1](../img/USB_node_built1.jpg)
+![USB node built2](../img/USB_node_built2.jpg)
 
 The above build uses an Arduino Nano V3.0 16M 5V ATmega328P module (which can be found on [eBay](https://www.ebay.com/sch/i.html?_nkw=Arduino+Nano+V3.0+16M+5V+ATmega328P)) and an RX5808 module (which can be found on [banggood](https://www.banggood.com/search/rx5808-module.html) and [eBay](https://www.ebay.com/sch/i.html?_nkw=rx5808+module)).
 

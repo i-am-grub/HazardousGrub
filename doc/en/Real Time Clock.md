@@ -16,7 +16,7 @@ The RTC module connects to the Raspberry Pi via the I2C bus.  The following four
 
 Here is an example of wiring a DS3231 module via a Delta5 V2 PCB:
 
-![DS3231 wiring](img/RH_DS3231_D5PCB.jpg)
+![DS3231 wiring](../img/RH_DS3231_D5PCB.jpg)
 
 If you're using one of the newer (Arduino-based) [RotorHazard PCBs &#10132;&#xFE0E;](https://github.com/RotorHazard/RotorHazard/tree/main/resources/PCB/README.md), there are several places on the board where these connections are available.
 

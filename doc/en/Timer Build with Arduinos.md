@@ -35,13 +35,13 @@ Remove the shield from the RX5808, the shield is normally held on by a few spots
 
 Remove the following resistor:
 
-![RX5808 spi mod](img/rx5808-new-top.jpg)
+![RX5808 spi mod](../img/rx5808-new-top.jpg)
 
 The shield should be soldered back in place after removing the resistor.
 
 ### Receiver Nodes
 Complete wiring connections between each Arduino and RX5808.
-![receiver node wiring](img/Receivernode.png)
+![receiver node wiring](../img/Receivernode.png)
 
 Note: A simple receiver node may also be constructed and attached via USB -- see [doc/USB Nodes.md](USB%20Nodes.md).
 
@@ -49,7 +49,7 @@ Note: A simple receiver node may also be constructed and attached via USB -- see
 Complete wiring connections between each Arduino and the Raspberry Pi.
 
 Note: be sure all Receiver Nodes and the Raspberry Pi are tied to a common ground; if not, the i2c messages can be corrupted.
-![system wiring](img/D5-i2c.png)
+![system wiring](../img/D5-i2c.png)
 
 -----------------------------
 

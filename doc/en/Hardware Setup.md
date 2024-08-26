@@ -24,7 +24,7 @@ See [WS2812b LED Support](Software%20Setup.md#ws2812b-led-support) under [doc/So
 
 For direct wiring to the Pi: The pins in the green box is what were already used by the timer. The pins in the red box is where you connect the signal and ground from the ws2812b LEDs.  The LEDs will require a separate power source.
 
-![led wiring](img/GPIO.jpg)
+![led wiring](../img/GPIO.jpg)
 
 ### Additional Sensors
 Sensors (such as BME280 and INA219) may be attached to the I2C bus and power pins. See the '..._sensor.py' files in the "src/interface" directory for implementation examples. The sensors need to be specified in the "src/server/config.json" file -- in the sample configuration below, a BME280 sensor is configured at I2C address 0x76 (as "Climate") and a INA219 sensor is configured at address 0x40 (as "Battery").

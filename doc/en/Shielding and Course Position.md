@@ -2,7 +2,7 @@
 
 ## Add a Directional RF Shield
 
-![Illustration of timer shielding](img/Shielding.svg)
+![Illustration of timer shielding](../img/Shielding.svg)
 
 A directional RF shield significantly improves the system's ability to reject false passes. This improves the timer's ability to collect accurate timing data, and allows operators to design courses that pass closely to the timing gate. 
 
@@ -18,19 +18,19 @@ It is recommended to attach the electrical ground on the timer to your shield.
 
 Lining a case with copper tape is a common method of creating a directional shield.
 
-![Copper foil lined case](img/90303253_2306043143029764_4699051829390999552_n.jpg)
+![Copper foil lined case](../img/90303253_2306043143029764_4699051829390999552_n.jpg)
 _Courtesy Cerberus Velvet_
 
 <hr />
 
 Outdoors, digging a hole can make use of the ground for basic shielding.
 
-![Timer placed into cut hole in ground](img/89616137_3370739889606959_7305691679179145216_n.jpg)
+![Timer placed into cut hole in ground](../img/89616137_3370739889606959_7305691679179145216_n.jpg)
 _Courtesy Sebi Wburg_
 
 ## Timer Positioning
 
-![Illustration of timer position relative to course](img/Course%20Position.svg)
+![Illustration of timer position relative to course](../img/Course%20Position.svg)
 
 The RF shield works best when you can block most of the race course while leaving the timer exposed from the direction of the timing gate.
 
@@ -42,12 +42,12 @@ The RF shield works best when you can block most of the race course while leavin
 
 Place the opening of the shield toward the gate, blocking the course beside and behind. A cardboard box simply wrapped in aluminum foil can be very effective.
 
-![Cardboard box with time sitting next to gate post](img/89967662_10216483637992439_7337319397440094208_o.jpg)
+![Cardboard box with time sitting next to gate post](../img/89967662_10216483637992439_7337319397440094208_o.jpg)
 _Courtesy Mark Silva_
 
 <hr />
 
 From the pilot station and race operations outside of the course, you should be able to see the timer inside its shield.
 
-![Gate with timer on far side](img/90432519_10220077497761722_3340940070398984192_n.jpg)
+![Gate with timer on far side](../img/90432519_10220077497761722_3340940070398984192_n.jpg)
 _Courtesy Roger Bess_
